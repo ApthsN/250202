@@ -1,0 +1,45 @@
+<!--กำหนดว่าไฟล์นี้เป็น HTML5 ซึ่งจะช่วยให้เบราว์เซอร์รู้วิธีการแสดงผลไฟล์นี้-->
+<!DOCTYPE html>
+<!-- เริ่มต้นเอกสาร HTML โดยกำหนดว่าเอกสารนี้ใช้ภาษาอังกฤษ (lang="en") -->
+<html lang="en">
+<!-- <head>: ส่วนนี้ใช้ในการกำหนดข้อมูลเกี่ยวกับเอกสาร HTML เช่น ข้อมูลเมตา, ชื่อของหน้าเว็บ, หรือการเชื่อมต่อไฟล์ภายนอก -->
+<head>
+    <!-- กำหนดการเข้ารหัสเป็น UTF-8 เพื่อรองรับอักขระทั้งหมด เช่น ภาษาไทย -->
+    <meta charset="UTF-8"> 
+    <!-- ใช้เพื่อทำให้หน้าเว็บรองรับการแสดงผลบนมือถือ โดยการกำหนดให้ความกว้างของหน้าเว็บเท่ากับความกว้างของอุปกร -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Age Calculator</title>: กำหนดชื่อของหน้าเว็บที่จะแสดงในแท็บของเบราว์เซอร์ -->
+    <title>Happy Birthday</title>
+    <!-- <link rel="stylesheet" href="styles.css">: เชื่อมต่อไฟล์ CSS ที่ชื่อ styles.css เพื่อกำหนดสไตล์ของหน้าเว็บ -->
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมต่อไฟล์ CSS -->
+</head>
+<!-- <body>: ส่วนนี้จะเป็นเนื้อหาหลักของหน้าเว็บที่ผู้ใช้สามารถเห็นได้ -->
+    <!-- <div class="container">: สร้างกล่อง (div) ที่ใช้เพื่อห่อหุ้มเนื้อหาทั้งหมดและให้สไตล์ด้วยคลาส container -->
+    <!-- <h1>Age Calculator</h1>: หัวข้อหลักของหน้าเว็บ โดยใช้ <h1> เพื่อกำหนดหัวข้อใหญ่สุด -->
+    <!-- <p>Enter your birthdate to calculate your age:</p>: คำอธิบายให้ผู้ใช้กรอกวันเกิด -->
+<body>
+    <div class = "container"> 
+        <h1>Age Calculator</h1>
+        <p>Enter your birthdate to calculate your age:</p>
+        <!-- <form id="ageForm">: ฟอร์มที่ใช้รับข้อมูลจากผู้ใช้ โดยกำหนด id="ageForm" สำหรับอ้างอิง -->
+        <form id="ageForm">
+            <!-- <label for="birthdate">: สร้างคำบรรยายสำหรับช่องกรอกข้อมูล input เพื่อให้ผู้ใช้รู้ว่าจะกรอกอะไร -->
+            <label for="birthdate">YOUR Birthday (YYYY-MM-DD):</label>
+            <!-- <input type="date" id="birthdate" name="birthdate" required>: ช่องกรอกข้อมูลที่เป็นประเภทวันที่ (type="date") ให้ผู้ใช้กรอกวันเกิด -->
+            <input type="date" id="birthdate" name="birthdate" required></input>
+            <!-- <button type="submit">Calculate Age</button>: ปุ่มที่ผู้ใช้กดเพื่อส่งข้อมูลฟอร์ม -->
+            <button type="submit">calculate age</button>
+        </form>
+        <!-- <div id="result" class="hidden">: กล่องที่ใช้แสดงผลลัพธ์เมื่อคำนวณเสร็จ โดยใช้ id="result" เพื่ออ้างอิง และมีคลาส hidden เพื่อซ่อนกล่องนี้ไว้ในตอนเริ่มต้น -->
+        <div id="result" class="hidden">
+            <!-- <h2>Result:</h2>: หัวข้อแสดงผลลัพธ์/ -->
+            <h2>result:</h2>
+            <!-- <p id="ageMessage"></p>: แสดงข้อความเกี่ยวกับอายุที่คำนวณได้ -->
+            <p id="ageMessage"></p>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script>: เชื่อมต่อไฟล์ JavaScript ที่ชื่อ script.js ซึ่งจะทำการคำนวณอายุจากวันเกิดที่กรอก -->
+    <script src="script.js"></script>
+
+</body>
+</html>
